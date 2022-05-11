@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" lang="fr">
+    <meta http-equiv = "Content-Type" content = "text/html; charset = UTF-8" />
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--seo-->
+    <meta name = "description" content = "Learn about HTML best practices." />
+    <meta name = "author" content = "John Doe" />
+    <meta property="og:title" content="The Rock" />
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+    <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
+
+    <!-----favicone----->
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <!-------mes polices------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4d26393d88.js" crossorigin="anonymous"></script>
+    <!-------mes css------->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!---------->
+<header id="header">
+    <a class="site-logo" href="#">
+        Logo
+    </a>
+
+    <nav role="navigation" id="nav-main" class="okayNav">
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Mes réalisations</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<!---------->
+<main>
+    <!----hero------>
+    <section id="hero" class="flex justify-center align-center">
+        <div id="hero-content">
+            <h1>Edouard Vello</h1>
+            <p>Graphiste P.A.O - Dessinateur industriel</p>
+        </div>
+    </section>
+    <!--compétences---->
+    <section id="skills">
+
+        <article id="skills-about" class="max-width">
+            <div class="flex row resp-column align-center">
+                <div id="skills-about_img" class="flex align-center">
+                    <figure>
+                        <img src="./src/img/photo-de-profil.jpg" alt="ma photo" width="227" height="227"/></figure>
+                </div>
+                <div id="skills-about_content">
+                    <h2>À propos</h2>
+                    <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Etiam sed posuere urna, eu ullamcorper nibh.
+                        Suspendisse vel eros sit amet</strong></p>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Etiam sed posuere urna, eu ullamcorper nibh.
+                            Suspendisse vel eros sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Etiam sed posuere urna, eu ullamcorper nibh.
+                            Suspendisse vel eros sit amet.Etiam sed posuere urna, eu ullamcorper nibh.
+                            Suspendisse vel eros sit amet
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Etiam sed posuere urna, eu ullamcorper nibh.
+                            Suspendisse vel eros sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Etiam sed posuere urna, eu ullamcorper nibh.
+                            Suspendisse vel eros sit amet. Etiam sed posuere urna, eu ullamcorper nibh.
+                            Suspendisse vel eros sit amet
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article id="skills-human" class="flex wrap">
+
+            <ul class="flex row resp-column justify-around content-center">
+                <li class="bg-darken-primary">
+                    <a href="#"><h2 class="mes-competences">Mes compétences</h2></a></li>
+                <li class="bg-secondary"><i class="fa-solid fa-dice-d20"></i>
+                    <a href="#">DAO / CAO <br>(2D & 3D)</a></li>
+            </ul>
+            <ul class="flex row resp-column-reverse justify-around content-center">
+                <li class="bg-primary"><i class="fa-solid fa-swatchbook"></i>
+                    <a href="#">Graphisme <br>& impression</a></li>
+                <li class="bg-darken-secondary"><i class="fa-solid fa-dragon"></i>
+                    <a href="#">Technicité &<br>créativité</a></li>
+            </ul>
+            <ul class="flex row resp-none justify-around content-center">
+                <li class="bg-secondary"><i class="fa-solid fa-compass-drafting"></i>
+                    <a href="#">Dessin <br>industriel</a></li>
+                <li class="bg-darken-primary"><i class="fa-solid fa-ear-listen"></i>
+                    <a href="#">Sens de<br>l'écoute</a></li>
+            </ul>
+            <ul class="flex row resp-none justify-around content-center">
+                <li class="bg-darken-secondary"><i class="fa-solid fa-gears"></i>
+                    <a href="#">Mécanique <br>& finitions</a></li>
+                <li class="bg-primary"><i class="fa-solid fa-house-laptop"></i>
+                    <a href="#">Architecture &<br>design d'objet</a></li>
+            </ul>
+
+        </article>
+
+    </section>
+    <!---mes projets--->
+    <section id="projects">
+        <h2>Mes réalisations</h2>
+        <div class="max-width card-wrapper">
+            <article class="card">
+                <figure>
+                    <img src="./src/img/texture/texture-glass.jpg" alt=""/>
+                </figure>
+                <div class="card-content">
+                    <h3>Titre projet</h3>
+                    <p>It is a long established fact that a reader will
+                        be distracted by the readable content of a page when
+                        looking at its layout.
+                    </p>
+                    <a href="#">Voir plus +</a>
+                </div>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./src/img/texture/texture-glass.jpg" alt=""/>
+                </figure>
+                <div class="card-content">
+                    <h3>Titre projet</h3>
+                    <p>It is a long established fact that a reader will
+                        be distracted by the readable content of a page when
+                        looking at its layout.
+                    </p>
+                    <a href="#">Voir plus +</a>
+                </div>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./src/img/texture/texture-glass.jpg" alt=""/>
+                </figure>
+                <div class="card-content">
+                    <h3>Titre projet</h3>
+                    <p>It is a long established fact that a reader will
+                        be distracted by the readable content of a page when
+                        looking at its layout.
+                    </p>
+                    <a href="#">Voir plus +</a>
+                </div>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./src/img/texture/texture-glass.jpg" alt=""/>
+                </figure>
+                <div class="card-content">
+                    <h3>Titre projet</h3>
+                    <p>It is a long established fact that a reader will
+                        be distracted by the readable content of a page when
+                        looking at its layout.
+                    </p>
+                    <a href="#">Voir plus +</a>
+                </div>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./src/img/texture/texture-glass.jpg" alt=""/>
+                </figure>
+                <div class="card-content">
+                    <h3>Titre projet</h3>
+                    <p>It is a long established fact that a reader will
+                        be distracted by the readable content of a page when
+                        looking at its layout.
+                    </p>
+                    <a href="#">Voir plus +</a>
+                </div>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./src/img/texture/texture-glass.jpg" alt=""/>
+                </figure>
+                <div class="card-content">
+                    <h3>Titre projet</h3>
+                    <p>It is a long established fact that a reader will
+                        be distracted by the readable content of a page when
+                        looking at its layout.
+                    </p>
+                    <a href="#">Voir plus +</a>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+    <section id="contact" class="bg-primary flex column align-center">
+        <h2>Contact</h2>
+        <p>mply dummy text of the printing and
+            typesetting industry. Lorem Ipsum <br>
+            has been the industry's standard dummy
+            text ever since the 1500s,
+        </p>
+        <a href="mailto:edouard-vello@gmail.com" class="cta-1">Écrivez-moi</a>
+    </section>
+
+</main>
+<!---------->
+<footer class="site-footer">
+    <div class="max-width">
+        <div class="flex row">
+            <div class="">
+                <h6>About</h6>
+                <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Categories</h6>
+                <ul class="footer-links">
+                    <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                    <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                    <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                    <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                    <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                    <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="max-width">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+                    <a href="#">Scanfcode</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!----JavaScript--------->
+<script src="js/cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/VPenkov/okayNav/master/app/js/jquery.okayNav.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

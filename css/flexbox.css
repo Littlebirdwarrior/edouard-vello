@@ -1,0 +1,203 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
+/* none*/
+
+.none {
+    display: none;
+}
+
+.text-invisible {
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+}
+
+
+/* mes flexboxes*/
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/*flex-direction*/
+
+.row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.row-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.column-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+/* wrap*/
+
+.nowrap {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.wrap {
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+}
+
+.wrap-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: wrap-reverse;
+    flex-flow: wrap-reverse;
+}
+
+/* justify-content*/
+
+.justify-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.justify-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.justify-around {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+/*align-content*/
+
+.content-start {
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+}
+
+.content-end {
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+}
+
+.content-center {
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+.content-around {
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+}
+
+.content-space-between {
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+}
+
+/* align item*/
+
+.align-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.align-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.align-center {
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.align-end {
+    -ms-flex-align: baseline;
+    -webkit-box-align: baseline;
+    align-items: baseline;
+}
+
+/*z-index*/
+
+.z-index_1 {
+    z-index: 1;
+}
+.z-index_2 {
+    z-index: 2;
+}
+
+/*max-width*/
+
+.max-width {
+    width: 70%;
+    margin: auto;
+}
+
+/* mon responsive*/
+
+@media (max-width: 720px) {
+
+    .resp-none {
+        display: none;
+    }
+
+    .resp-column {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .resp-column-reverse {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+
+    .resp-row {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .max-width {
+        width: 100%;
+        margin : 0;
+    }
+}
