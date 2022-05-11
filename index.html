@@ -29,23 +29,23 @@
 <!---------->
 <header id="header">
     <a class="site-logo" href="#">
-        Logo
+        Edouard Vello
     </a>
 
     <nav role="navigation" id="nav-main" class="okayNav">
         <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">À propos</a></li>
-            <li><a href="#">Mes réalisations</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#skills">À propos</a></li>
+            <li><a href="#projects">Mes réalisations</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
 <!---------->
 <main>
     <!----hero------>
-    <section id="hero" class="flex justify-center align-center">
-        <div id="hero-content">
+    <section id="hero" class="hero flex justify-center align-center">
+        <div id="hero-content" class="hero-content">
             <h1>Edouard Vello</h1>
             <p>Graphiste P.A.O - Dessinateur industriel</p>
         </div>
@@ -65,7 +65,7 @@
                         Etiam sed posuere urna, eu ullamcorper nibh.
                         Suspendisse vel eros sit amet</strong></p>
                     <div>
-                        <p>
+                        <p class="text-justify">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Etiam sed posuere urna, eu ullamcorper nibh.
                             Suspendisse vel eros sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -73,7 +73,7 @@
                             Suspendisse vel eros sit amet.Etiam sed posuere urna, eu ullamcorper nibh.
                             Suspendisse vel eros sit amet
                         </p>
-                        <p>
+                        <p class="text-justify">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Etiam sed posuere urna, eu ullamcorper nibh.
                             Suspendisse vel eros sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -131,7 +131,7 @@
                         be distracted by the readable content of a page when
                         looking at its layout.
                     </p>
-                    <a href="#">Voir plus +</a>
+                    <a href="./page-projet.html">Voir plus +</a>
                 </div>
             </article>
             <article class="card">
@@ -144,7 +144,7 @@
                         be distracted by the readable content of a page when
                         looking at its layout.
                     </p>
-                    <a href="#">Voir plus +</a>
+                    <a href="./page-projet.html">Voir plus +</a>
                 </div>
             </article>
             <article class="card">
@@ -157,7 +157,7 @@
                         be distracted by the readable content of a page when
                         looking at its layout.
                     </p>
-                    <a href="#">Voir plus +</a>
+                    <a href="./page-projet.html">Voir plus +</a>
                 </div>
             </article>
             <article class="card">
@@ -170,7 +170,7 @@
                         be distracted by the readable content of a page when
                         looking at its layout.
                     </p>
-                    <a href="#">Voir plus +</a>
+                    <a href="./page-projet.html">Voir plus +</a>
                 </div>
             </article>
             <article class="card">
@@ -183,7 +183,7 @@
                         be distracted by the readable content of a page when
                         looking at its layout.
                     </p>
-                    <a href="#">Voir plus +</a>
+                    <a href="./page-projet.html">Voir plus +</a>
                 </div>
             </article>
             <article class="card">
@@ -196,7 +196,7 @@
                         be distracted by the readable content of a page when
                         looking at its layout.
                     </p>
-                    <a href="#">Voir plus +</a>
+                    <a href="./page-projet.html">Voir plus +</a>
                 </div>
             </article>
 
@@ -216,36 +216,18 @@
 </main>
 <!---------->
 <footer class="site-footer">
-    <div class="max-width">
-        <div class="flex row">
-            <div class="">
-                <h6>About</h6>
-                <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
-            </div>
+    <div>
 
-            <div class="col-xs-6 col-md-3">
-                <h6>Categories</h6>
-                <ul class="footer-links">
-                    <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                    <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                    <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                    <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                    <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                    <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
-                </ul>
-            </div>
-        </div>
-        <hr>
-    </div>
-    <div class="max-width">
-        <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-                <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
-                    <a href="#">Scanfcode</a>.
+        <div class="max-width flex row resp-column-reverse justify-between">
+
+            <div class="footer-content">
+                <h6>Edouard Vello</h6>
+
+                <p>mply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum <br>
+                    has been the industry's standard dummy
+                    text ever since the 1500s,
                 </p>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
                 <ul class="social-icons">
                     <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
@@ -253,8 +235,29 @@
                     <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
                 </ul>
             </div>
+            <div class="footer-nav">
+                <h6>Mon site</h6>
+                <ul>
+                    <li>
+                        <a href="#hero">Retour à l'accueil</a>
+                    </li>
+                    <li>
+                        <a href="#skills">À propos</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Mes projets</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+
     </div>
+
+
+
 </footer>
 
 <!----JavaScript--------->

@@ -5,11 +5,11 @@
 
 /* mes variables de couleurs*/
 :root {
-    --dark-color: #424244;
-    --primary-color: #24af8f;
-    --secondary-color: #228e91;
-    --darken-primary-color: #384b4d;
-    --darken-secondary-color: #075e60;
+    --dark-color: #353536;
+    --primary-color: #1a8a82;
+    --secondary-color: #0ec0c0;
+    --darken-primary-color: #224b54;
+    --darken-secondary-color: rgb(9, 143, 143);
     --white:#f7f7f7;
     --black:#1a1a1a;
 }
@@ -19,7 +19,7 @@
             rgba(36, 175, 143, 0.5),
             rgb(45, 98, 88, 0.5)
     ),
-            url("../src/img/texture/texture-glass.jpg");
+    url("../src/img/texture/texture-glass.jpg");
 }
 
 
@@ -79,7 +79,10 @@ body {
     background-color: var(--white);
 }
 
-a { text-decoration: none }
+a {
+    text-decoration: none;
+    color: var(--darken-primary-color);
+}
 
 ul {
     margin: 0;
@@ -90,6 +93,11 @@ ul {
 h1, h2, .uppercase {
     text-transform: uppercase;
 }
+
+h2, h3 {
+    color: var(--darken-primary-color) ;
+}
+
 /* ----------------------HEADER */
 header {
     -webkit-align-items: center;
@@ -116,6 +124,7 @@ header {
     transition: color 200ms cubic-bezier(.55, 0, .1, 1);
     color: var(--primary-color);
     font-size: 3rem;
+    font-weight: bold;
 }
 
 .ok-header__logo:hover {color: var(--secondary-color)}
@@ -159,7 +168,7 @@ body.okayNav-loaded {
     padding: 15px 15px;
 }
 .okayNav__nav--visible a:hover {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 /* Style des liens pour la partie off-screen de la nav
 (arrivent par la droite)*/
@@ -248,297 +257,305 @@ body.okayNav-loaded {
 .okayNav__menu-toggle.icon--active span {
     background: var(--secondary-color);
 }
-
-
+/********************************************/
+/*PAGE PROJET*/
 /*-------------------------- MAIN*/
 
 /*----------hero*/
-main #hero {
-    background-image: linear-gradient(
-            rgba(41, 154, 157, 0.2),
-            rgba(26, 26, 26, 0.5)
-    ),  /*Applique un filtre noir sur l'image*/
-            url("../src/img/pexels-felipepelaquim-8546568-optimisé.jpg");
+
+main .hero{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 100vh;
 }
+
+main #hero {
+    background-image: linear-gradient(
+            rgba(41, 154, 157, 0.2),
+            rgba(26, 26, 26, 0.5)
+    ),  /*Applique un filtre noir sur l'image*/
+    url("../src/img/pexels-felipepelaquim-8546568-optimisé.jpg");
+}
+
+
+
 /*optimisation banner*/
 @media (min-width: 1080px) {
     main #hero {
         background-image: linear-gradient(
-                rgba(41, 154, 157, 0.2),
+                rgb(35, 35, 35, 0.2),
                 rgba(26, 26, 26, 0.5)
         ), /*Applique un filtre noir sur l'image*/ url("../src/img/pexels-felipepelaquim-8546568-grand.jpg");
 
     }
+}
 
-    #hero #hero-content {
-        width: fit-content;
-        margin-top: 5%;
-    }
+.hero .hero-content {
+    width: fit-content;
+    margin-top: 5%;
+}
 
-    #hero #hero-content h1 {
-        text-align: center;
-        font-size: 6rem;
-        line-height: 0.8rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        color: var(--white);
-    }
+.hero .hero-content h1 {
+    text-align: center;
+    font-size: 6rem;
+    line-height: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+}
 
-    #hero #hero-content p {
-        text-align: center;
-        font-size: 2.5rem;
-        font-weight: 400;
-        color: var(--white);
-    }
+.hero .hero-content p {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--white);
+}
 
-    /* mediaqueries hero*/
-    @media (max-width: 580px) {
-        #hero #hero-content h1 {
-            font-size: 3rem;
-            line-height: 1.2rem;
-        }
-
-        #hero #hero-content p {
-            font-size: 2rem;
-        }
-
-    }
-
-    /*-----------skills*/
-    /* les damiers des compétences, humain*/
-
-    #skills #skills-human {
-        width: 100%;
-    }
-
-    #skills #skills-human ul {
-        width: 50%;
-    }
-
-    #skills #skills-human ul li {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-    #skills #skills-human ul li {
-        width: 100%;
-        height: 30vh;
-    }
-
-    #skills #skills-human ul li i {
+/* mediaqueries hero*/
+@media (max-width: 580px) {
+    .hero .hero-content h1 {
         font-size: 3rem;
-        color: var(--white);
-        margin-bottom: 10px;
+        line-height: 1.2rem;
     }
 
-    #skills #skills-human ul li a {
-        text-align: center;
+    .hero #hero-content p {
         font-size: 2rem;
-        color: var(--white);
     }
 
-    /*mediaqueries skills*/
-    /*skills-about*/
-    #skills #skills-about {
-        padding: 5% 0;
-    }
+}
 
-    #skills #skills-about div #skills-about_img {
-        background: #d3d2d2;
-        width: 250px;
-        height: 250px;
-        margin: 15px auto;
-    }
+/*-----------skills*/
+/* les damiers des compétences, humain*/
 
-    #skills-about_img figure {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
-        padding: 0;
-        border-radius: 50%;
-        text-align: center;
-        overflow: hidden;
-    }
+#skills #skills-human {
+    width: 100%;
+}
 
-    #skills #skills-about div #skills-about_img figure img {
-        display: block;
-        height: auto;
-        width: 100%;
-        margin: 0 0 0 0;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
+#skills #skills-human ul {
+    width: 50%;
+}
+
+#skills #skills-human ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#skills #skills-human ul li {
+    width: 100%;
+    height: 30vh;
+}
+
+#skills #skills-human ul li i {
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+#skills #skills-human ul li a {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+/*mediaqueries skills*/
+/*skills-about*/
+#skills #skills-about {
+    padding: 5% 0;
+}
+
+#skills #skills-about div #skills-about_img {
+    background: #d3d2d2;
+    width: 250px;
+    height: 250px;
+    margin: 15px auto;
+}
+
+#skills-about_img figure {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#skills #skills-about div #skills-about_img figure img {
+    display: block;
+    height: auto;
+    width: 100%;
+    margin: 0 0 0 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#skills #skills-about div #skills-about_content {
+    width: 70%;
+    padding-left: 5%;
+}
+
+#skills #skills-about #skills-about_content h2 {
+    text-align: left;
+    font-size: 3rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+}
+
+#skills #skills-about div #skills-about_content div {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+#skills #skills-about div #skills-about_content div p {
+    margin: 0 auto 0;
+}
+
+.mes-competences {
+    font-size: 2.5rem;
+    padding: 10px;
+    color: var(--white);
+}
+
+@media (max-width: 1080px) {
+    .mes-competences {
+        font-size: 2rem;
+        padding: 10px;
     }
+}
+
+@media (max-width: 720px) {
 
     #skills #skills-about div #skills-about_content {
-        width: 70%;
-        padding-left: 5%;
+        width: 100%;
+        padding: 0 10px;
     }
 
     #skills #skills-about #skills-about_content h2 {
-        text-align: left;
-        font-size: 3rem;
-        line-height: 1rem;
-        text-transform: uppercase;
-        color: var(--darken-primary-color);
-    }
-
-    #skills #skills-about div #skills-about_content div {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 1fr 10px 1fr;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px;
-    }
-
-    #skills #skills-about div #skills-about_content div p {
-        margin: 0 auto 0;
-    }
-
-    .mes-competences {
-        font-size: 2.5rem;
-        padding: 10px;
-    }
-
-    @media (max-width: 1080px) {
-        .mes-competences {
-            font-size: 2rem;
-            padding: 10px;
-        }
-    }
-
-    @media (max-width: 720px) {
-
-        #skills #skills-about div #skills-about_content {
-            width: 100%;
-            padding: 0 10px;
-        }
-
-        #skills #skills-about #skills-about_content h2 {
-            text-align: center;
-            line-height: 1.8rem;
-            margin: 10px auto;
-        }
-
-    }
-
-    /*---------------mes projets*/
-    #projects {
-        padding: 5% 0;
-    }
-
-    #projects h2 {
         text-align: center;
-        font-size: 3rem;
-        line-height: 1rem;
-        text-transform: uppercase;
-        color: var(--darken-primary-color);
+        line-height: 1.8rem;
+        margin: 10px auto;
+    }
+
+}
+
+/*---------------mes projets*/
+#projects {
+    padding: 5% 0;
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+}
+
+.card-wrapper {
+    margin: auto;
+    padding: 2% 0 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 5px 1fr 5px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+
+@media (max-width: 1050px) {
+    .card-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: wrap;
+        flex-flow: wrap;
     }
 
     .card-wrapper {
-        margin: auto;
-        padding: 2% 0 0;
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 1fr 5px 1fr 5px 1fr;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 5px;
-    }
-
-
-    @media (max-width: 1050px) {
-        .card-wrapper {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-flow: wrap;
-            flex-flow: wrap;
-        }
-
-        .card-wrapper {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-flow: wrap;
-            flex-flow: wrap;
-        }
-
-        .card {
-            width: 80%;
-            height: 400px;
-            margin: 10px auto;
-            box-shadow: 0px 0px 15px rgba(52, 52, 70, 0.12);
-        }
-
-
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: wrap;
+        flex-flow: wrap;
     }
 
     .card {
-        width: 280px;
+        width: 80%;
         height: 400px;
-        margin: 5px auto 30px;
+        margin: 10px auto;
         box-shadow: 0px 0px 15px rgba(52, 52, 70, 0.12);
     }
 
-    .card:hover {
-        box-shadow: 0px 0px 15px rgba(48, 48, 65, 0.25);
-    }
 
-    .card:hover .card-content>a {
-        color: var(--primary-color) !important;
-    }
-
-    .card figure {
-        width: 100%;
-        height: 50%;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    .card figure img {
-        width: 100%;
-        height: auto;
-    }
-
-    .card .card-content {
-        width: 80%;
-        margin: 5px auto;
-    }
-
-    .card .card-content p {
-        margin: 0 0 7px;
-    }
-
-    .card-wrapper .card .card-content a {
-        color: var(--dark-color);
-    }
-
-    .card-wrapper .card .card-content a:hover {
-        color: var(--primary-color);
-    }
 }
+
+.card {
+    width: 280px;
+    height: 400px;
+    margin: 5px auto 30px;
+    box-shadow: 0px 0px 15px rgba(52, 52, 70, 0.12);
+}
+
+.card:hover {
+    box-shadow: 0px 0px 15px rgba(48, 48, 65, 0.25);
+}
+
+.card:hover .card-content>a {
+    color: var(--primary-color) !important;
+}
+
+.card figure {
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.card figure img {
+    width: 100%;
+    height: auto;
+}
+
+.card .card-content {
+    width: 80%;
+    margin: 5px auto;
+}
+
+.card .card-content p {
+    margin: 0 0 7px;
+}
+
+.card-wrapper .card .card-content a {
+    color: var(--darken-primary-color);
+}
+
+.card-wrapper .card .card-content a:hover {
+    text-decoration: underline;
+    text-underline-style: thick;
+    color: var(--primary-color);
+}
+
 
 /*contact*/
 
 #contact {
     width: 100%;
     height: auto;
-    padding: 2% 0 5%;
+    padding: 2% 5%;
 }
 
 #contact h2 {
-    color: var(--darken-primary-color);
     font-size: 3rem;
     line-height: 1.2;
-    margin: 3rem 0 0;
+    margin: 4rem 0 0;
 }
 
 #contact p {
@@ -551,75 +568,43 @@ main #hero {
     padding: 5px;
     width: 200px;
     text-align: center;
-    margin: 0 auto;
+    margin: 1rem auto 3rem;
     font-size: 2rem;
+    font-weight: bold;
     color: var(--white);
-    border: 2px solid var(--white);
-}
-
-.cta-1:hover {
     background-color: var(--darken-primary-color);
 }
 
-.site-footer
-{
-    background-color:#26272b;
-    padding:45px 0 20px;
-    font-size:15px;
-    line-height:24px;
-    color:#737373;
+.cta-1:hover {
+    color: var(--darken-primary-color);
+    background-color: var(--primary-color);
+    border: 2px solid var(--darken-primary-color);
 }
-.site-footer hr
-{
-    border-top-color:#bbb;
-    opacity:0.5
+
+/* footer*/
+
+.site-footer {
+    background: var(--dark-color);
+    margin: 0;
+    padding: 2rem 0;
+
 }
-.site-footer hr.small
-{
-    margin:20px 0
+.site-footer h6{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-left:6px;
+    line-height: 0.5rem;
+    color: var(--white);
 }
-.site-footer h6
-{
-    color:#fff;
-    font-size:16px;
-    text-transform:uppercase;
-    margin-top:5px;
-    letter-spacing:2px
+
+.site-footer p, .site-footer a {
+    color: #818a91;
+    margin-left:6px;
 }
-.site-footer a
-{
-    color:#737373;
-}
-.site-footer a:hover
-{
-    color:var(--primary-color);
-    text-decoration:none;
-}
-.footer-links
-{
-    padding-left:0;
-    list-style:none
-}
-.footer-links li
-{
-    display:block
-}
-.footer-links a
-{
-    color:#737373
-}
-.footer-links a:active,.footer-links a:focus,.footer-links a:hover
-{
-    color:var(--primary-color);
-    text-decoration:none;
-}
-.footer-links.inline li
-{
-    display:inline-block
-}
+
 .site-footer .social-icons
 {
-    text-align:right
+    text-align:left
 }
 .site-footer .social-icons a
 {
@@ -629,30 +614,11 @@ main #hero {
     margin-left:6px;
     margin-right:0;
     border-radius:100%;
-    background-color:#33353d
+    background-color: #39393b;
 }
-.copyright-text
-{
-    margin:0
-}
-@media (max-width:991px)
-{
-    .site-footer [class^=col-]
-    {
-        margin-bottom:30px
-    }
-}
-@media (max-width:767px)
-{
-    .site-footer
-    {
-        padding-bottom:0
-    }
-    .site-footer .copyright-text,.site-footer .social-icons
-    {
-        text-align:center
-    }
-}
+
+
+/*mes icones*/
 .social-icons
 {
     padding-left:0;
@@ -717,13 +683,91 @@ main #hero {
 }
 @media (max-width:767px)
 {
+    .footer-content, .footer-nav {
+        padding: 0 3rem;
+    }
+
     .social-icons li.title
     {
         display:block;
         margin-right:0;
         font-weight:600
     }
+
+}
+
+/*PAGE PROJET*/
+
+/*hero*/
+main #hero-page-1 {
+    background-image: linear-gradient(
+            rgba(41, 154, 157, 0.2),
+            rgba(26, 26, 26, 0.5)
+    ),  /*Applique un filtre noir sur l'image*/
+    url("../src/img/texture/texture-paint.jpg");
+}
+
+.hero-content .hero-content-preview {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.hero-content .hero-content-preview img{
+    width: 100%;
+    height: auto;
+}
+
+/*projet preview*/
+
+.projet article{
+    padding: 3rem 2rem;
+}
+
+.description-projet h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.description-projet .projet-preview {
+    margin-right: 3rem;
+}
+
+.img-projet figure{
+    min-width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.img-projet figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.description-projet div p {
+    min-width: 350px;
 }
 
 
+@media  (max-width: 750px) {
 
+    .description-projet div p {
+        min-width: 200px;
+        max-width: 80%;
+        margin: 2rem auto;
+    }
+
+    .description-projet .projet-preview {
+        margin: 0 auto;
+    }
+}
+
+.bottom-nav a {
+   font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
