@@ -216,7 +216,7 @@ main #hero {
             to right,
             rgba(23, 26, 26, 0.8),
             rgba(26, 26, 26, 0.5)
-    ), /*Applique un filtre noir sur l'image*/ url("../src/img/jon-tyson-FlHdnPO6dlw-unsplash.jpg") no-repeat center;
+    ), /*Applique un filtre noir sur l'image*/ url("../src/img/jon-tyson-FlHdnPO6dlw-unsplash.jpg") center;
 
 }
 
