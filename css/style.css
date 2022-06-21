@@ -103,164 +103,7 @@ h3 {
 }
 
 /* ----------------------HEADER */
-header {
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: #fff;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    height: 7rem;
-    padding: 0 15px;
-    position: fixed;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    top: 0;
-    width: 100%
-}
 
-.site-logo {
-    transition: color 200ms cubic-bezier(.55, 0, .1, 1);
-    color: var(--primary-color);
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-.ok-header__logo:hover {color: var(--secondary-color)}
-
-/*La nav collapse*/
-/* okayNav styles */
-body.okayNav-loaded {
-    overflow-x: hidden;
-}
-.okayNav:not(.loaded) {
-    visibility: hidden;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.okayNav ul {
-    /* We want two navigations - one hidden and one visible */
-    float: left;
-}
-.okayNav a {
-    /* Links general styling */
-    color: var(--dark-color);
-    font-size: 1.4rem;
-    font-weight: bold;
-    position: relative;
-    z-index: 1;
-}
-/* Style des liens pour la partie visible de la nav */
-.okayNav__nav--visible {
-    overflow: hidden;
-    white-space: nowrap;
-}
-.okayNav__nav--visible li {
-    display: inline-block;
-}
-.okayNav__nav--visible a {
-    /* Link styling for the visible part of the nav */
-    display: block;
-    transition: color 200ms cubic-bezier(0.55, 0, 0.1, 1);
-    padding: 15px 15px;
-}
-.okayNav__nav--visible a:hover {
-    color: var(--primary-color);
-}
-/* Style des liens pour la partie off-screen de la nav
-(arrivent par la droite)*/
-.okayNav__nav--invisible {
-    position: fixed;
-    top: 70px;
-    bottom: 0;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    background: var(--white);
-}
-.okayNav__nav--invisible a {
-    background: var(--white);
-    width: 240px;
-    display: block;
-    padding: 15px;
-}
-/*l'animation transform pour les ul*/
-.okayNav__nav--invisible.nav-left {
-    left: 0;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-}
-.okayNav__nav--invisible.nav-right {
-    right: 0;
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-}
-.okayNav__nav--invisible.transition-enabled {
-    transition: -webkit-transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
-    transition: transform 400ms cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
-}
-.okayNav__nav--invisible.nav-open {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-}
-/* La Kebab icone */
-.okayNav__menu-toggle {
-    position: relative;
-    transition: -webkit-transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
-    transition: transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
-    cursor: pointer;
-    width: 40px;
-    height: 20px;
-    float: left;
-    z-index: 1;
-    top: 15px;
-}
-.okayNav__menu-toggle.okay-invisible {
-    position: absolute;
-    opacity: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    pointer-events: none;
-}
-.okayNav__menu-toggle span {
-    display: block;
-    position: absolute;
-    margin: auto;
-    height: 4px;
-    width: 4px;
-    background: var(--dark-color);
-    border-radius: 50%;
-    left: 0;
-    right: 0;
-    pointer-events: none;
-}
-.okayNav__menu-toggle span:nth-child(1) {
-    top: 0;
-}
-.okayNav__menu-toggle span:nth-child(2) {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-.okayNav__menu-toggle span:nth-child(3) {
-    bottom: 0;
-}
-.okayNav__menu-toggle.icon--active {
-    /* Kebab icon when off-screen nav is open */
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-.okayNav__menu-toggle.icon--active span {
-    background: var(--secondary-color);
-}
 /********************************************/
 /*PAGE PROJET*/
 /*-------------------------- MAIN*/
@@ -270,302 +113,16 @@ body.okayNav-loaded {
 main .hero{
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    width: 50%;
     height: 100vh;
 }
 
 main #hero {
     background-image: linear-gradient(
-            rgba(41, 154, 157, 0.2),
-            rgba(26, 26, 26, 0.5)
+            rgb(39, 77, 79, 0.2),
+            rgba(26, 26, 26, 0.8)
     ),  /*Applique un filtre noir sur l'image*/
     url("../src/img/pexels-felipepelaquim-8546568-optimisé.jpg");
-}
-
-
-
-/*optimisation banner*/
-@media (min-width: 1080px) {
-    main #hero {
-        background-image: linear-gradient(
-                rgb(35, 35, 35, 0.2),
-                rgba(26, 26, 26, 0.5)
-        ), /*Applique un filtre noir sur l'image*/ url("../src/img/pexels-felipepelaquim-8546568-grand.jpg");
-
-    }
-}
-
-.hero .hero-content {
-    width: fit-content;
-    margin-top: 5%;
-}
-
-.hero .hero-content h1 {
-    text-align: center;
-    font-size: 6rem;
-    line-height: 0.8rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: var(--white);
-}
-
-.hero .hero-content p {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 400;
-    color: var(--white);
-}
-
-/* mediaqueries hero*/
-@media (max-width: 580px) {
-    .hero .hero-content h1 {
-        font-size: 3rem;
-        line-height: 1.2rem;
-    }
-
-    .hero #hero-content p {
-        font-size: 2rem;
-    }
-
-}
-
-/*-----------skills*/
-/* les damiers des compétences, humain*/
-
-#skills #skills-human {
-    width: 100%;
-}
-
-#skills #skills-human ul {
-    width: 50%;
-}
-
-#skills #skills-human ul li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-#skills #skills-human ul li {
-    width: 100%;
-    height: 30vh;
-}
-
-#skills #skills-human ul li i {
-    font-size: 3rem;
-    color: var(--white);
-    margin-bottom: 10px;
-}
-
-#skills #skills-human ul li a {
-    text-align: center;
-    font-size: 2rem;
-    color: var(--white);
-}
-
-/*mediaqueries skills*/
-/*skills-about*/
-#skills #skills-about {
-    padding: 5% 0;
-}
-
-#skills #skills-about div #skills-about_img {
-    background: #d3d2d2;
-    width: 250px;
-    height: 250px;
-    margin: 15px auto;
-}
-
-#skills-about_img figure {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    padding: 0;
-    border-radius: 50%;
-    text-align: center;
-    overflow: hidden;
-}
-
-#skills #skills-about div #skills-about_img figure img {
-    display: block;
-    height: auto;
-    width: 100%;
-    margin: 0 0 0 0;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-}
-
-#skills #skills-about div #skills-about_content {
-    width: 70%;
-    padding-left: 5%;
-}
-
-#skills #skills-about #skills-about_content h2 {
-    text-align: left;
-    font-size: 3rem;
-    line-height: 1rem;
-    text-transform: uppercase;
-}
-
-#skills #skills-about div #skills-about_content div {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 10px 1fr;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-}
-
-#skills #skills-about div #skills-about_content div p {
-    margin: 0 auto 0;
-}
-
-.mes-competences {
-    font-size: 2.5rem;
-    padding: 10px;
-    color: var(--white);
-}
-
-@media (max-width: 1080px) {
-    .mes-competences {
-        font-size: 2rem;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 720px) {
-
-    #skills #skills-about div #skills-about_content {
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    #skills #skills-about #skills-about_content h2 {
-        text-align: center;
-        line-height: 1.8rem;
-        margin: 10px auto;
-    }
-
-}
-
-/*---------------mes projets*/
-#projects {
-    padding: 5% 0;
-}
-
-#projects h2 {
-    text-align: center;
-    font-size: 3rem;
-    line-height: 1rem;
-    text-transform: uppercase;
-}
-
-.card-wrapper {
-    margin: auto;
-    padding: 2% 0 0;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 5px 1fr 5px 1fr;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
-}
-
-
-@media (max-width: 1050px) {
-    .card-wrapper {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-flow: wrap;
-        flex-flow: wrap;
-    }
-
-    .card-wrapper {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-flow: wrap;
-        flex-flow: wrap;
-    }
-
-    .card {
-        width: 80%;
-        height: 400px;
-        margin: 10px auto;
-        box-shadow: 0px 0px 15px rgba(52, 52, 70, 0.12);
-    }
-
-
-}
-
-.card {
-    width: 280px;
-    height: 400px;
-    margin: 5px auto 30px;
-    box-shadow: 0px 0px 15px rgba(52, 52, 70, 0.12);
-}
-
-.card:hover {
-    box-shadow: 0px 0px 15px rgba(48, 48, 65, 0.25);
-}
-
-.card:hover .card-content>a {
-    color: var(--primary-color) !important;
-}
-
-.card figure {
-    width: 100%;
-    height: 50%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.card figure img {
-    width: 100%;
-    height: auto;
-}
-
-.card .card-content {
-    width: 80%;
-    margin: 5px auto;
-}
-
-.card .card-content p {
-    margin: 0 0 7px;
-}
-
-.card-wrapper .card .card-content a {
-    color: var(--darken-primary-color);
-}
-
-.card-wrapper .card .card-content a:hover {
-    text-decoration: underline;
-    text-underline-style: thick;
-    color: var(--primary-color);
-}
-
-
-/*contact*/
-
-#contact {
-    width: 100%;
-    height: auto;
-    padding: 2% 5%;
-}
-
-#contact h2 {
-    font-size: 3rem;
-    line-height: 1.2;
-    margin: 4rem 0 0;
-    color: var(--white)
-}
-
-#contact p {
-    color: var(--white);
-    font-size: 2rem;
 }
 
 .cta-1 {
@@ -584,6 +141,80 @@ main #hero {
     color: var(--white);
     background-color: var(--primary-color);
 }
+
+/*optimisation banner*/
+@media (min-width: 1080px) {
+    main #hero {
+        background-image: linear-gradient(
+                rgb(39, 77, 79, 0.2),
+                rgba(26, 26, 26, 0.8)
+        ), /*Applique un filtre noir sur l'image*/ url("../src/img/pexels-felipepelaquim-8546568-grand.jpg");
+
+    }
+}
+
+.hero .hero-content {
+    width: fit-content;
+    margin-top: 5%;
+}
+
+.hero .hero-content h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.hero .hero-content .slogan {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--white);
+}
+
+
+/* mediaqueries hero*/
+@media (max-width: 580px) {
+    .hero .hero-content h1 {
+        font-size: 3rem;
+        line-height: 1.2rem;
+    }
+
+    .hero #hero-content .slogan {
+        font-size: 2rem;
+    }
+
+}
+
+/*Contact*/
+
+.contact {
+    width: 50%;
+    height: auto;
+    background-color: #1a1a1a;
+}
+
+.contact>div {
+    margin-top: 50%;
+}
+
+.contact-titre {
+    font-size: 2.5rem;
+}
+
+.contact-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 3rem auto 2rem;
+    max-width: 300px;
+}
+
+.contact p {
+    color: var(--white);
+}
+
+
 
 /* footer*/
 
@@ -700,92 +331,3 @@ main #hero {
 
 }
 
-/*PAGE PROJET*/
-
-/*hero*/
-main #hero-page-1 {
-    background-image: linear-gradient(
-            rgba(41, 154, 157, 0.2),
-            rgba(26, 26, 26, 0.5)
-    ),  /*Applique un filtre noir sur l'image*/
-    url("../src/img/texture/texture-paper.jpg");
-}
-
-.hero-content .hero-content-preview {
-    min-width: 200px;
-    max-width: 400px;
-    height: auto;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-.hero-content .hero-content-preview img{
-    width: 100%;
-    height: auto;
-}
-
-/*projet preview*/
-
-.projet article{
-    padding: 3rem 2rem;
-}
-
-.description-projet h2 {
-    text-align: center;
-    font-size: 3rem;
-}
-
-.description-projet .projet-preview {
-    min-width: 200px;
-    max-width: 300px;
-    overflow: hidden;
-    margin-right: 3rem;
-}
-
-.description-projet .projet-preview img{
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.description-projet .projet-preview {
-    margin-right: 3rem;
-}
-
-.img-projet figure{
-    min-width: 200px;
-    max-width: 100%;
-    height: auto;
-    margin: 3rem auto;
-    overflow: hidden;
-}
-
-.img-projet figure img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.description-projet div p {
-    min-width: 350px;
-}
-
-
-@media  (max-width: 750px) {
-
-    .description-projet div p {
-        min-width: 200px;
-        max-width: 80%;
-        margin: 2rem auto;
-    }
-
-    .description-projet .projet-preview {
-        margin: 0 auto;
-    }
-}
-
-.bottom-nav a {
-   font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 4rem;
-}
