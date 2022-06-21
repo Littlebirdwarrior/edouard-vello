@@ -8,7 +8,7 @@
     --dark-color: #353536;
     --primary-color: #f56518;
     --secondary-color: #0ec0c0;
-    --darken-primary-color: #274d4f;
+    --darken-primary-color: #187981;
     --darken-secondary-color: rgb(9, 143, 143);
     --white:#f7f7f7;
     --black:#1a1a1a;
@@ -79,10 +79,6 @@ body {
     background-color: var(--white);
 }
 
-a {
-    text-decoration: none;
-    color: var(--darken-primary-color);
-}
 
 ul {
     margin: 0;
@@ -90,17 +86,19 @@ ul {
     list-style: none;
 }
 
-h1, h2, .uppercase {
+h1 .uppercase{
     text-transform: uppercase;
 }
 
-h2 {
+h1, h2 {
     color: var(--primary-color) ;
+    font-size: 400px;
 }
 
-h3 {
-    color: var(--darken-primary-color)
+a {
+    text-decoration: none;
 }
+
 
 /* ----------------------HEADER */
 
@@ -119,7 +117,7 @@ main .hero{
 
 main #hero {
     background-image: linear-gradient(
-            rgb(39, 77, 79, 0.2),
+            rgba(16, 24, 24, 0.5),
             rgba(26, 26, 26, 0.8)
     ),  /*Applique un filtre noir sur l'image*/
     url("../src/img/pexels-felipepelaquim-8546568-optimisé.jpg");
@@ -146,7 +144,7 @@ main #hero {
 @media (min-width: 1080px) {
     main #hero {
         background-image: linear-gradient(
-                rgb(39, 77, 79, 0.2),
+                rgba(13, 76, 79, 0.2),
                 rgba(26, 26, 26, 0.8)
         ), /*Applique un filtre noir sur l'image*/ url("../src/img/pexels-felipepelaquim-8546568-grand.jpg");
 
@@ -155,30 +153,52 @@ main #hero {
 
 .hero .hero-content {
     width: fit-content;
-    margin-top: 5%;
+    margin-top: -5%;
 }
 
 .hero .hero-content h1 {
     text-align: center;
     font-size: 4rem;
+    margin: 0 auto;
     font-weight: 400;
     text-transform: uppercase;
-    color: var(--white);
 }
 
 .hero .hero-content .slogan {
     text-align: center;
     font-size: 2rem;
     font-weight: 400;
+    padding: 0 3rem;
+    max-width: 670px;
     color: var(--white);
 }
 
+.link {
+    padding: 0 3rem;
+}
+
+.link>li>a {
+    color: var(--white);
+    font-size: 1.6rem;
+    padding-right: 1rem;
+}
+.link>li>a>i {
+    padding-right: .5rem;
+}
+
+.linkedin {
+    color: #0355ec;
+}
 
 /* mediaqueries hero*/
-@media (max-width: 580px) {
+@media (max-width: 1219px) {
+    main .hero{
+        width:100%;
+        height: 40vh;
+    }
+
     .hero .hero-content h1 {
-        font-size: 3rem;
-        line-height: 1.2rem;
+        font-size: 2.8rem;
     }
 
     .hero #hero-content .slogan {
@@ -192,142 +212,46 @@ main #hero {
 .contact {
     width: 50%;
     height: auto;
-    background-color: #1a1a1a;
-}
+    background: linear-gradient(
+            to right,
+            rgba(23, 26, 26, 0.8),
+            rgba(26, 26, 26, 0.5)
+    ), /*Applique un filtre noir sur l'image*/ url("../src/img/jon-tyson-FlHdnPO6dlw-unsplash.jpg") no-repeat center;
 
-.contact>div {
-    margin-top: 50%;
 }
 
 .contact-titre {
     font-size: 2.5rem;
+    padding: 0 3rem;
+    font-weight: 400;
+    margin: 4rem auto 0;
 }
 
 .contact-text {
     font-size: 1.5rem;
     font-weight: 400;
-    margin: 3rem auto 2rem;
-    max-width: 300px;
+    margin: 1rem auto 2rem;
+    padding: 0 3rem;
+    max-width: 470px;
 }
 
 .contact p {
     color: var(--white);
 }
 
+@media (max-width: 1219px) {
+    .contact {
+        width: 100%;
+        height: 60vh;
 
-
-/* footer*/
-
-.site-footer {
-    background: var(--dark-color);
-    margin: 0;
-    padding: 2rem 0;
-
-}
-.site-footer h6{
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    margin-left:6px;
-    line-height: 0.5rem;
-    color: var(--white);
-}
-
-.site-footer p, .site-footer a {
-    color: #818a91;
-    margin-left:6px;
-}
-
-.site-footer .social-icons
-{
-    text-align:left
-}
-.site-footer .social-icons a
-{
-    width:40px;
-    height:40px;
-    line-height:40px;
-    margin-left:6px;
-    margin-right:0;
-    border-radius:100%;
-    background-color: #39393b;
-}
-
-
-/*mes icones*/
-.social-icons
-{
-    padding-left:0;
-    margin-bottom:0;
-    list-style:none
-}
-.social-icons li
-{
-    display:inline-block;
-    margin-bottom:4px
-}
-.social-icons li.title
-{
-    margin-right:15px;
-    text-transform:uppercase;
-    color:#96a2b2;
-    font-weight:700;
-    font-size:13px
-}
-.social-icons a{
-    background-color:#eceeef;
-    color:#818a91;
-    font-size:16px;
-    display:inline-block;
-    line-height:44px;
-    width:44px;
-    height:44px;
-    text-align:center;
-    margin-right:8px;
-    border-radius:100%;
-    -webkit-transition:all .2s linear;
-    -o-transition:all .2s linear;
-    transition:all .2s linear
-}
-.social-icons a:active,.social-icons a:focus,.social-icons a:hover
-{
-    color:#fff;
-    background-color:var(--secondary-color)
-}
-.social-icons.size-sm a
-{
-    line-height:34px;
-    height:34px;
-    width:34px;
-    font-size:14px
-}
-.social-icons a.facebook:hover
-{
-    background-color:#3b5998
-}
-.social-icons a.twitter:hover
-{
-    background-color:#00aced
-}
-.social-icons a.linkedin:hover
-{
-    background-color:#007bb6
-}
-.social-icons a.dribbble:hover
-{
-    background-color:#ea4c89
-}
-@media (max-width:767px)
-{
-    .footer-content, .footer-nav {
-        padding: 0 3rem;
     }
 
-    .social-icons li.title
-    {
-        display:block;
-        margin-right:0;
-        font-weight:600
+    .contact-text {
+        margin: 0 auto 2rem;
     }
 
+    .contact>div {
+        margin-top: 0;
+    }
 }
 
