@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* styles css*/
 
 /*mes imports*/
@@ -15,6 +22,18 @@
 }
 
 .bg-primary {
+    background-image: -webkit-gradient(
+            linear,
+            left top, left bottom,
+            from(rgba(36, 175, 143, 0.5)),
+            to(rgb(45, 98, 88, 0.5))
+    ),
+    url("../src/img/texture/texture-glass.jpg");
+    background-image: -o-linear-gradient(
+            rgba(36, 175, 143, 0.5),
+            rgb(45, 98, 88, 0.5)
+    ),
+    url("../src/img/texture/texture-glass.jpg");
     background-image: linear-gradient(
             rgba(36, 175, 143, 0.5),
             rgb(45, 98, 88, 0.5)
@@ -25,6 +44,20 @@
 
 
 .bg-secondary {
+    background-image:
+            -webkit-gradient(
+                    linear,
+                    left top, left bottom,
+                    from(rgb(41, 154, 157, 0.5)),
+                    to(rgb(39, 77, 79, 0.5))
+            ),  /*Applique un filtre noir sur l'image*/
+            url("../src/img/texture/texture-paint.jpg");
+    background-image:
+            -o-linear-gradient(
+                    rgb(41, 154, 157, 0.5),
+                    rgb(39, 77, 79, 0.5)
+            ),  /*Applique un filtre noir sur l'image*/
+            url("../src/img/texture/texture-paint.jpg");
     background-image:
             linear-gradient(
                     rgb(41, 154, 157, 0.5),
@@ -37,6 +70,20 @@
 
 .bg-darken-primary {
     background-image:
+            -webkit-gradient(
+                    linear,
+                    left top, left bottom,
+                    from(rgb(26, 26, 26, 0.2)),
+                    to(rgba(43, 57, 59, 0.8))
+            ),  /*Applique un filtre noir sur l'image*/
+            url("../src/img/texture/texture-wood.jpg");
+    background-image:
+            -o-linear-gradient(
+                    rgb(26, 26, 26, 0.2),
+                    rgba(43, 57, 59, 0.8)
+            ),  /*Applique un filtre noir sur l'image*/
+            url("../src/img/texture/texture-wood.jpg");
+    background-image:
             linear-gradient(
                     rgb(26, 26, 26, 0.2),
                     rgba(43, 57, 59, 0.8)
@@ -48,6 +95,20 @@
 
 .bg-darken-secondary {
     background-image:
+            -webkit-gradient(
+                    linear,
+                    left top, left bottom,
+                    from(rgb(39, 88, 91, 0.8)),
+                    to(rgb(26, 26, 26, 0.2))
+            ),  /*Applique un filtre noir sur l'image*/
+            url("../src/img/texture/texture-paper.jpg");
+    background-image:
+            -o-linear-gradient(
+                    rgb(39, 88, 91, 0.8),
+                    rgb(26, 26, 26, 0.2)
+            ),  /*Applique un filtre noir sur l'image*/
+            url("../src/img/texture/texture-paper.jpg");
+    background-image:
             linear-gradient(
                     rgb(39, 88, 91, 0.8),
                     rgb(26, 26, 26, 0.2)
@@ -58,8 +119,8 @@
 
 
 /* Styles généraux */
-* { box-sizing:border-box }
-*:before, *:after { box-sizing:inherit }
+* { -webkit-box-sizing:border-box; box-sizing:border-box }
+*:before, *:after { -webkit-box-sizing:inherit; box-sizing:inherit }
 
 figure, img, ul, ol {
     margin: 0;
@@ -116,6 +177,18 @@ main .hero{
 }
 
 main #hero {
+    background-image: -webkit-gradient(
+            linear,
+            left top, left bottom,
+            from(rgba(16, 24, 24, 0.5)),
+            to(rgba(26, 26, 26, 0.8))
+    ),  /*Applique un filtre noir sur l'image*/
+    url("../src/img/pexels-felipepelaquim-8546568-optimisé.jpg");
+    background-image: -o-linear-gradient(
+            rgba(16, 24, 24, 0.5),
+            rgba(26, 26, 26, 0.8)
+    ),  /*Applique un filtre noir sur l'image*/
+    url("../src/img/pexels-felipepelaquim-8546568-optimisé.jpg");
     background-image: linear-gradient(
             rgba(16, 24, 24, 0.5),
             rgba(26, 26, 26, 0.8)
@@ -145,6 +218,16 @@ main #hero {
 /*optimisation banner*/
 @media (min-width: 1080px) {
     main #hero {
+        background-image: -webkit-gradient(
+                linear,
+                left top, left bottom,
+                from(rgba(13, 76, 79, 0.2)),
+                to(rgba(26, 26, 26, 0.8))
+        ), /*Applique un filtre noir sur l'image*/ url("../src/img/pexels-felipepelaquim-8546568-grand.jpg");
+        background-image: -o-linear-gradient(
+                rgba(13, 76, 79, 0.2),
+                rgba(26, 26, 26, 0.8)
+        ), /*Applique un filtre noir sur l'image*/ url("../src/img/pexels-felipepelaquim-8546568-grand.jpg");
         background-image: linear-gradient(
                 rgba(13, 76, 79, 0.2),
                 rgba(26, 26, 26, 0.8)
@@ -154,6 +237,8 @@ main #hero {
 }
 
 .hero .hero-content {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin-top: -5%;
 }
@@ -228,6 +313,17 @@ main #hero {
 .contact {
     width: 50%;
     height: auto;
+    background: -webkit-gradient(
+            linear,
+            left top, right top,
+            from(rgba(23, 26, 26, 0.8)),
+            to(rgba(26, 26, 26, 0.5))
+    ), /*Applique un filtre noir sur l'image*/ url("../src/img/jon-tyson-FlHdnPO6dlw-unsplash.jpg") center;
+    background: -o-linear-gradient(
+            left,
+            rgba(23, 26, 26, 0.8),
+            rgba(26, 26, 26, 0.5)
+    ), /*Applique un filtre noir sur l'image*/ url("../src/img/jon-tyson-FlHdnPO6dlw-unsplash.jpg") center;
     background: linear-gradient(
             to right,
             rgba(23, 26, 26, 0.8),
@@ -372,5 +468,4 @@ main #hero {
         transform: translate(0);
     }
 }
-
 
