@@ -292,6 +292,14 @@ main #hero {
             url("../src/img/jon-tyson-FlHdnPO6dlw-unsplash.jpg") center;
 }
 
+@media  (min-width: 750px) {
+    .illustration {
+
+        background:
+                url("../src/img/grande-jon-tyson-FlHdnPO6dlw-unsplash.jpg") center;
+    }
+}
+
 /* mediaqueries hero*/
 @media (max-width: 1219px) {
     main .hero{
