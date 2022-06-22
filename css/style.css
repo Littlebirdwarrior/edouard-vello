@@ -177,23 +177,24 @@ main .hero{
 }
 
 main #hero {
-    background-image: -webkit-gradient(
-            linear,
-            left top, left bottom,
-            from(rgba(16, 24, 24, 0.5)),
-            to(rgba(26, 26, 26, 0.8))
-    ),  /*Applique un filtre noir sur l'image*/
-    url("../src/img/pexels-felipepelaquim-8546568-optimisé.jpg");
-    background-image: -o-linear-gradient(
-            rgba(16, 24, 24, 0.5),
-            rgba(26, 26, 26, 0.8)
-    ),  /*Applique un filtre noir sur l'image*/
-    url("../src/img/pexels-felipepelaquim-8546568-optimisé.jpg");
-    background-image: linear-gradient(
-            rgba(16, 24, 24, 0.5),
-            rgba(26, 26, 26, 0.8)
-    ),  /*Applique un filtre noir sur l'image*/
-    url("../src/img/pexels-felipepelaquim-8546568-optimisé.jpg");
+    background: linear-gradient(260deg, #04444b, #1a1a1a)
+    /*background-image: -webkit-gradient(*/
+    /*        linear,*/
+    /*        left top, left bottom,*/
+    /*        from(rgba(16, 24, 24, 0.5)),*/
+    /*        to(rgba(26, 26, 26, 0.8))*/
+    /*),  !*Applique un filtre noir sur l'image*!*/
+    /*url("../src/img/pexels-felipepelaquim-8546568-optimisé.jpg");*/
+    /*background-image: -o-linear-gradient(*/
+    /*        rgba(16, 24, 24, 0.5),*/
+    /*        rgba(26, 26, 26, 0.8)*/
+    /*),  !*Applique un filtre noir sur l'image*!*/
+    /*url("../src/img/pexels-felipepelaquim-8546568-optimisé.jpg");*/
+    /*background-image: linear-gradient(*/
+    /*        rgba(16, 24, 24, 0.5),*/
+    /*        rgba(26, 26, 26, 0.8)*/
+    /*),  !*Applique un filtre noir sur l'image*!*/
+    /*url("../src/img/pexels-felipepelaquim-8546568-optimisé.jpg");*/
 }
 
 .cta-1 {
@@ -218,20 +219,20 @@ main #hero {
 /*optimisation banner*/
 @media (min-width: 1080px) {
     main #hero {
-        background-image: -webkit-gradient(
-                linear,
-                left top, left bottom,
-                from(rgba(13, 76, 79, 0.2)),
-                to(rgba(26, 26, 26, 0.8))
-        ), /*Applique un filtre noir sur l'image*/ url("../src/img/pexels-felipepelaquim-8546568-grand.jpg");
-        background-image: -o-linear-gradient(
-                rgba(13, 76, 79, 0.2),
-                rgba(26, 26, 26, 0.8)
-        ), /*Applique un filtre noir sur l'image*/ url("../src/img/pexels-felipepelaquim-8546568-grand.jpg");
-        background-image: linear-gradient(
-                rgba(13, 76, 79, 0.2),
-                rgba(26, 26, 26, 0.8)
-        ), /*Applique un filtre noir sur l'image*/ url("../src/img/pexels-felipepelaquim-8546568-grand.jpg");
+        /*background-image: -webkit-gradient(*/
+        /*        linear,*/
+        /*        left top, left bottom,*/
+        /*        from(rgba(13, 76, 79, 0.2)),*/
+        /*        to(rgba(26, 26, 26, 0.8))*/
+        /*), !*Applique un filtre noir sur l'image*! url("../src/img/pexels-felipepelaquim-8546568-grand.jpg");*/
+        /*background-image: -o-linear-gradient(*/
+        /*        rgba(13, 76, 79, 0.2),*/
+        /*        rgba(26, 26, 26, 0.8)*/
+        /*), !*Applique un filtre noir sur l'image*! url("../src/img/pexels-felipepelaquim-8546568-grand.jpg");*/
+        /*background-image: linear-gradient(*/
+        /*        rgba(13, 76, 79, 0.2),*/
+        /*        rgba(26, 26, 26, 0.8)*/
+        /*), !*Applique un filtre noir sur l'image*! url("../src/img/pexels-felipepelaquim-8546568-grand.jpg");*/
 
     }
 }
@@ -313,6 +314,7 @@ main #hero {
 .contact {
     width: 50%;
     height: auto;
+
     background: -webkit-gradient(
             linear,
             left top, right top,
