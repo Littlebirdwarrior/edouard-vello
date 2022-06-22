@@ -245,6 +245,7 @@ main #hero {
 
 .link {
     padding: 0 3rem;
+    margin-top: 1rem;
 }
 
 .link>li>a {
@@ -279,6 +280,7 @@ main #hero {
     font-weight: 400;
     padding: 1rem 3rem;
     max-width: 470px;
+    margin-top: 0;
     color: var(--white);
 }
 
